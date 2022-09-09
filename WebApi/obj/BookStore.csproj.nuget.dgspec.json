@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Taner\\Desktop\\yazilim\\Csharp\\BookStore\\BookStore.csproj": {}
+    "C:\\Users\\Taner\\Desktop\\yazilim\\Csharp\\BookStore\\WebApi\\BookStore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Taner\\Desktop\\yazilim\\Csharp\\BookStore\\BookStore.csproj": {
+    "C:\\Users\\Taner\\Desktop\\yazilim\\Csharp\\BookStore\\WebApi\\BookStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Taner\\Desktop\\yazilim\\Csharp\\BookStore\\BookStore.csproj",
+        "projectUniqueName": "C:\\Users\\Taner\\Desktop\\yazilim\\Csharp\\BookStore\\WebApi\\BookStore.csproj",
         "projectName": "BookStore",
-        "projectPath": "C:\\Users\\Taner\\Desktop\\yazilim\\Csharp\\BookStore\\BookStore.csproj",
+        "projectPath": "C:\\Users\\Taner\\Desktop\\yazilim\\Csharp\\BookStore\\WebApi\\BookStore.csproj",
         "packagesPath": "C:\\Users\\Taner\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Taner\\Desktop\\yazilim\\Csharp\\BookStore\\obj\\",
+        "outputPath": "C:\\Users\\Taner\\Desktop\\yazilim\\Csharp\\BookStore\\WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Taner\\AppData\\Roaming\\NuGet\\NuGet.Config"
