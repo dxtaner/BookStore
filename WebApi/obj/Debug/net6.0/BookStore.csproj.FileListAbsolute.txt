@@ -52,3 +52,7 @@ C:\Users\Taner\Desktop\yazilim\Csharp\BookStore\WebApi\obj\Debug\net6.0\refint\B
 C:\Users\Taner\Desktop\yazilim\Csharp\BookStore\WebApi\obj\Debug\net6.0\BookStore.pdb
 C:\Users\Taner\Desktop\yazilim\Csharp\BookStore\WebApi\obj\Debug\net6.0\BookStore.genruntimeconfig.cache
 C:\Users\Taner\Desktop\yazilim\Csharp\BookStore\WebApi\obj\Debug\net6.0\ref\BookStore.dll
+C:\Users\Taner\Desktop\yazilim\Csharp\BookStore\WebApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Taner\Desktop\yazilim\Csharp\BookStore\WebApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Taner\Desktop\yazilim\Csharp\BookStore\WebApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\Taner\Desktop\yazilim\Csharp\BookStore\WebApi\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
