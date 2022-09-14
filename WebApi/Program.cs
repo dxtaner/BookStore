@@ -1,6 +1,7 @@
 using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 using WebApi.DBOperations;
+using WebApi.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,7 +32,10 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
+app.UseCustomExceptionMiddle();
+
 app.MapControllers();
+
 
 app.Run();
 
