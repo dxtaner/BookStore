@@ -1,7 +1,6 @@
 using AutoMapper;
-using WebApi.BookOperations.Commands.CreateBook;
-using WebApi.BookOperations.GetBookDetail;
-using static WebApi.BookOperations.GetBooks.GetBooksQuery;
+using WebApi.Entities;
+using WebApi.Applications.GenreOperations.GetGenreDetail;
 
 namespace WebApi.Common
 {
@@ -10,8 +9,11 @@ namespace WebApi.Common
         public MappingProfile()
         {
             CreateMap<CreateBookModel, Book>();
-            CreateMap<Book, GetBookDetailViewModel>().ForMember(dest => dest.genreId, opt => opt.MapFrom(src => ((GenreEnum)src.genreId).ToString()));
-            CreateMap<Book,BooksViewModel>().ForMember(dest => dest.genreId, opt => opt.MapFrom(src => ((GenreEnum)src.genreId).ToString()));
+            CreateMap<Book, GetBookDetailViewModel>().ForMember(dest => dest.genreId, opt => opt.MapFrom(src => src.genre.name));
+            CreateMap<Book, BooksViewModel>().ForMember(dest => dest.genreId, opt => opt.MapFrom(src =>src.genre.name));
+            CreateMap<Genre, GenreViewModel>();
+            CreateMap<Genre, GenreDetailViewModel>();
+
         }
     }
 }
