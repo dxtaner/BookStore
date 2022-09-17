@@ -1,12 +1,12 @@
 using FluentValidation;
 
-namespace WebApi.Aplication.GenreOperations.Queries.GetGenreDetail
+namespace WebApi.Application.GenreOperations.Queries.GetGenreDetail
 {
-    public class GetGenreDetailQueryValidator: AbstractValidator<GetGenreQuery>
+    public class GetGenreDetailQueryValidator : AbstractValidator<GetGenreDetailQuery>
     {
         public GetGenreDetailQueryValidator()
         {
-            RuleFor(query => query.genreId).GreaterThan(0);
+            RuleFor(g => g.genreId).GreaterThan(0).WithMessage("Lütfen 0'dan büyük bir sayı yazınız.");
         }
     }
 }
