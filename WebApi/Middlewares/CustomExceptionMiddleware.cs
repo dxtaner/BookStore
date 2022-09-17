@@ -3,6 +3,7 @@ using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
+using WebApi.Services;
 
 namespace WebApi.Middlewares
 {
@@ -11,9 +12,12 @@ namespace WebApi.Middlewares
 
         private readonly RequestDelegate _next;
 
-        public CustomExceptionMiddleware(RequestDelegate _next)
+        private readonly ILoggerService  _loggerServices;
+
+        public CustomExceptionMiddleware(RequestDelegate _next, ILoggerService loggerServices)
         {
             this._next = _next;
+            _loggerServices = loggerServices;
         }
 
         public async Task Invoke(HttpContext context)
@@ -23,11 +27,11 @@ namespace WebApi.Middlewares
             try
             {
                 string message = " [Request] HTTP " + context.Request.Method + " - " + context.Request.Path;
-                Console.WriteLine(message);
+                _loggerServices.Write(message);
                 await _next(context);
                 watch.Stop();
                 message = "[Response] HTTP  " + context.Request.Method + " - " + context.Request.Path + " responded " + context.Response.StatusCode + " 'in " + watch.Elapsed.TotalMilliseconds + " ms";
-                Console.WriteLine(message);
+                _loggerServices.Write(message);
 
             }
             catch (Exception ex)
