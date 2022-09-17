@@ -13,6 +13,7 @@ namespace WebApi.Application.AuthorOperations.Commands.DeleteAuthor
 
         public void Handle()
         {
+            
             var Author = _dbContext.Authors.SingleOrDefault(b => b.authorId == AuthorId);
 
             if (Author is null)
