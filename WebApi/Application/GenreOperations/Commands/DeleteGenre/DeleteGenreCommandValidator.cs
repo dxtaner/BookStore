@@ -1,6 +1,6 @@
 using FluentValidation;
 
-namespace WebApi.Aplication.GenreOperations.DeleteGenre{
+namespace WebApi.Aplication.GenreOperations.Commands.DeleteGenre{
 
     public class DeleteGenreCommandValidator: AbstractValidator<DeleteGenreCommand>
     {

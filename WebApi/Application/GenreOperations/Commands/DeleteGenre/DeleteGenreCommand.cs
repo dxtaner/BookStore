@@ -1,6 +1,6 @@
 using WebApi.DBOperations;
 
-namespace WebApi.Aplication.GenreOperations.DeleteGenre{
+namespace WebApi.Aplication.GenreOperations.Commands.DeleteGenre{
 
     public class DeleteGenreCommand
     {
