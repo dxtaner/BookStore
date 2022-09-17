@@ -20,7 +20,7 @@ namespace WebApi.Aplication.GenreOperations.Queries.GetGenres
         {
             var genres = _context.Genres.Where(x => x.isActive == true).OrderBy(x => x.Id);
             List<GenreViewModel> returnObj = _mapper.Map<List<GenreViewModel>>(genres);
-            return returnObj;
+            return returnObj;           
 
         }
     }
