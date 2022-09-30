@@ -7,11 +7,14 @@ using WebApi.Application.GenreOperations.Queries.GetGenreDetail;
 using WebApi.Application.GenreOperations.Commands.CreateGenre;
 using WebApi.Application.GenreOperations.Commands.UpdateGenre;
 using WebApi.Aplication.GenreOperations.Commands.DeleteGenre;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebApi.Controllers
 {
     [Route("/[controller]s")]
     [ApiController]
+    [Authorize]
+
     public class GenresController : ControllerBase
     {
         private readonly IBookStoreDbContext _context;

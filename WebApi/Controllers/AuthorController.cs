@@ -7,11 +7,13 @@ using WebApi.Application.AuthorOperations.Queries.GetAuthors;
 using WebApi.Application.AuthorOperations.Commands.UpdateAuthor;
 using WebApi.Application.AuthorOperations.Commands.DeleteAuthor;
 using WebApi.Aplication.AuthorOperations.Queries.GetAuthorDetail;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebApi.Controllers
 {
     [Route("[controller]s")]
     [ApiController]
+    [Authorize]
     public class AuthorController : ControllerBase
     {
         private readonly IBookStoreDbContext _context;

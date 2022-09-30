@@ -1,5 +1,6 @@
 using AutoMapper;
 using FluentValidation;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WebApi.Application.BookOperations.Commands.CreateBook;
 using WebApi.Application.BookOperations.Commands.DeleteBook;
@@ -12,6 +13,7 @@ namespace WebApi.Controllers
 {
 
     [ApiController]
+    [Authorize]
     [Route("[controller]s")]
     public class BookController : ControllerBase
     {
@@ -60,10 +62,10 @@ namespace WebApi.Controllers
             command.Model = newBook;
             CreateBookCommandValidator validator = new CreateBookCommandValidator();
             validator.ValidateAndThrow(command);
-                // ValidationResult result=validator.Validate(command);
-                // if(!result.IsValid)
-                // foreach(var item in result.Errors)
-                // Console.WriteLine("Property Name: " + item.PropertyName + " - Error Message: " + item.ErrorMessage);
+            // ValidationResult result=validator.Validate(command);
+            // if(!result.IsValid)
+            // foreach(var item in result.Errors)
+            // Console.WriteLine("Property Name: " + item.PropertyName + " - Error Message: " + item.ErrorMessage);
 
             command.Handle();
 
@@ -82,14 +84,14 @@ namespace WebApi.Controllers
             validator.ValidateAndThrow(command);
             command.Handle();
 
-  
+
             return Ok();
         }
 
         [HttpDelete("{id}")]
         public IActionResult DeleteBook(int id)
         {
-          
+
             DeleteBookCommand command = new DeleteBookCommand(_context);
             command.BookId = id;
             DeleteBookCommandValidator validator = new DeleteBookCommandValidator();
