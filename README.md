@@ -1,52 +1,13 @@
-<h1>Kitap Uygulaması Web API</h1>
-<p>Bu C# Web API uygulaması, kitap, yazar, tür ve kullanıcı kayıtlarını yönetmek için tasarlanmıştır.</p>
-<h2>API Kullanımı</h2>
-<p>API'ye erişmek için, API ana URL'sini kullanarak HTTP istekleri göndermelisiniz. Örneğin, kitapları listelemek için <code>GET</code> isteği göndermeniz gerekmektedir:</p>
-<pre><code>GET https://localhost:5001/api/books
-</code></pre>
-<p>Bir kitap eklemek için <code>POST</code> isteği göndermeniz gerekmektedir:</p>
-<pre><code>POST https://localhost:5001/api/books
-Content-Type: application/json
+<h1>Book Application Web API</h1> <p>This C# Web API application is designed to manage records for books, authors, genres, and users.</p> <h2>API Usage</h2> <p>To access the API, you must send HTTP requests using the main API URL. For example, to list books, you need to send a <code>GET</code> request:</p> <pre><code>GET https://localhost:5001/api/books </code></pre> <p>To add a book, you need to send a <code>POST</code> request:</p> <pre><code>POST https://localhost:5001/api/books Content-Type: application/json
+{ "title": "Harry Potter and the Philosopher's Stone", "author": "J.K. Rowling", "genre": 1 } </code></pre>
 
-{
-    "title": "Harry Potter and the Philosopher's Stone",
-    "author": "J.K. Rowling",
-    "genre": 1
-}
-</code></pre>
-<p>Bir kitabı güncellemek için <code>PUT</code> isteği göndermeniz gerekmektedir:</p>
-<pre><code>PUT https://localhost:5001/api/books/1
-Content-Type: application/json
+<p>To update a book, you need to send a <code>PUT</code> request:</p> <pre><code>PUT https://localhost:5001/api/books/1 Content-Type: application/json
+{ "title": "Harry Potter and the Sorcerer's Stone", "author": "J.K. Rowling", "genre": 2 } </code></pre>
 
-{
-    "title": "Harry Potter and the Sorcerer's Stone",
-    "author": "J.K. Rowling",
-    "genre": 2
-}
-</code></pre>
-<p>Bir kitabı silmek için <code>DELETE</code> isteği göndermeniz gerekmektedir:</p>
-<pre><code>DELETE https://localhost:5001/api/books/1
-</code></pre>
-<p>Diğer kayıt türleri (yazar, tür, kullanıcı) için de benzer istekler gönderebilirsiniz.</p>
-<h2>API Belgeleri</h2>
-<p>API belgeleri, API'nin kullanımı hakkında ayrıntılı bilgi sağlar. API belgelerinde, API'nin kullanımı, özellikleri ve örnekleri yer alır.</p>
-<p>API belgelerine erişmek için, API'nin ana URL'sine "/swagger" ekleyebilirsiniz. Örneğin, "https://localhost:5001/swagger" adresi API belgelerine yönlendirir.</p>
-<h2>API Lisansı</h2>
-<p>API'nin lisansı, API'nin kullanımı hakkında bilgi sağlar. API'nin lisansı, kullanıcıların API'yi nasıl kullanabileceğini belirler.</p>
-<p>API'nin lisansı, API belgelerinde yer almaktadır. Kullanıcıların API'yi kullanmadan önce lisansı okumaları ve kabul etmeleri gerekmektedir.</p>
-<h2>Kurulum</h2>
-<p>Bu uygulamayı çalıştırmak için aşağıdaki adımları izleyin:</p>
-<ol>
-<li>Bu repo'yu klonlayın.</li>
-<li>.NET Core 6 SDK yükleyin</li>
-<li>Visual Studio veya bir metin düzenleyici kullanarak proje dosyalarını açın.</li>
-<li>Uygulamanın çalıştırılması için gerekli olan bağımlılıkları yüklemek için NuGet Paket Yöneticisi'ni kullanın.</li>
-<li>Uygulamayı çalıştırmak için, "IIS Express" veya "localhost" sunucusunu kullanarak uygulama çalıştırılabilir.</li>
-<li>API'ye erişmek için, uygun URL'leri kullanarak HTTP istekleri gönderin.</li>
-</ol>
-<h2>Katılımcılar</h2>
-<p>Bu proje açık kaynaklıdır ve katkıda bulunmak isteyenler tarafından geliştirilmiştir. Her türlü katkı, öneri ve geri bildirimler hoş karşılanmaktadır.</p>
-<p>Katkıda bulunmak isteyenler, projeyi çatallayabilir, geliştirebilir ve özellikle hata ayıklama, belgeleme ve testler konusunda yardımcı olabilir.</p>
-<p>Lütfen katkıda bulunmadan önce CONTRIBUTING.md dosyasını okuyunuz ve proje ile ilgili sorularınızı veya önerilerinizi GitHub Issues bölümünde paylaşınız.</p>
-<h2>Lisans</h2>
-<p>Bu proje MIT Lisansı ile lisanslanmıştır. Daha fazla bilgi için LICENSE dosyasını okuyunuz.</p>
+<p>To delete a book, you need to send a <code>DELETE</code> request:</p> <pre><code>DELETE https://localhost:5001/api/books/1 </code></pre> <p>You can send similar requests for other record types (author, genre, user).</p> <h2>API Documentation</h2> <p>The API documentation provides detailed information about how to use the API, including its features and examples.</p> <p>To access the API documentation, append "/swagger" to the main API URL. For example, "https://localhost:5001/swagger" will direct you to the API documentation.</p> <h2>API License</h2> <p>The API license provides information on how the API can be used. The license outlines the terms under which users can utilize the API.</p> <p>The license is included in the API documentation. Users should read and accept the license before using the API.</p> <h2>Setup</h2> <p>Follow these steps to run the application:</p> <ol> <li>Clone this repository.</li> <li>Install the .NET Core 6 SDK.</li> <li>Open the project files using Visual Studio or a text editor.</li> <li>Use the NuGet Package Manager to install the required dependencies for the application.</li> <li>Run the application using the "IIS Express" or "localhost" server.</li> <li>Send HTTP requests using the appropriate URLs to access the API.</li> </ol> <h2>Contributors</h2> <p>This project is open source and has been developed by contributors. All kinds of contributions, suggestions, and feedback are welcome.</p> <p>Those interested in contributing can fork the project, improve it, and particularly help with debugging, documentation, and testing.</p> <p>Please read the CONTRIBUTING.md file before contributing and share your questions or suggestions in the GitHub Issues section.</p> <h2>License</h2> <p>This project is licensed under the MIT License. For more information, see the LICENSE file.</p>
+
+
+
+
+
+
